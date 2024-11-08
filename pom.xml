@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- הגדרות בסיסיות לפרויקט, כולל גרסה ומיקום הסכימה -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- מזהים ייחודיים לפרויקט -->
+  <groupId>com.example</groupId> <!-- מזהה קבוצה ייחודי לארגון או לחברה שבבעלותה הפרויקט -->
+  <artifactId>Oren_2024_11_01_1</artifactId> <!-- מזהה ייחודי לפרויקט עצמו -->
+  <version>1.0-SNAPSHOT</version> <!-- גרסת פרויקט, עם SNAPSHOT המציינת גרסה בפיתוח -->
+
+  <!-- סוג האריזה של הפרויקט -->
+  <packaging>jar</packaging> <!-- סוג האריזה כ-JAR -->
+
+  <!-- שם הפרויקט וכתובת URL עזר -->
+  <name>Oren_2024_11_01_1</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- משתנים והגדרות נוספות לפרויקט -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- קביעת קידוד הקבצים כ-UTF-8 -->
+    <java.version>17</java.version> <!-- הגדרת גרסת Java -->
+    <spring-boot.version>3.3.5</spring-boot.version> <!-- משתנה מרכזי עבור גרסת Spring Boot -->
+  </properties>
+
+  <!-- הגדרת תלותים לפרויקט -->
+  <dependencies>
+    <!-- תלות בספריית JUnit עבור בדיקות -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope> <!-- מציין שהתלות תשמש רק בבדיקות -->
+    </dependency>
+
+    <!-- תלות בספריית Spring Boot Starter Web -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${spring-boot.version}</version> <!-- שימוש במשתנה לגרסת Spring Boot -->
+    </dependency>
+  </dependencies>
+
+  <!-- הגדרות Build והוספת פלגינים -->
+  <build>
+    <plugins>
+      <!-- פלגין של Spring Boot המאפשר הפעלת היישום ובניית JAR עצמאי -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-boot.version}</version> <!-- שימוש במשתנה לגרסת Spring Boot -->
+      </plugin>
+    </plugins>
+  </build>
+</project>
